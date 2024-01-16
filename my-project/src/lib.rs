@@ -1,14 +1,24 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+#!/usr/bin/rustc
+
+mod front_of_house {
+    mod hosting() {
+        fn add_to_waitlist() {}
+        fn seat_at_table() {}
+    }
+
+    mod serving {
+        fn take_order() {}
+        fn serve_order() {}
+        fn take_payment() {}
+    }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+pub fn eat_at_restaurant() {
+    // using absolute paths
+    crate::front_of_house::hosting::add_to_waitlist();
+    crate::front_of_house::hosting::add_to_waitlist();
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+    //using relative path
+    front_of_house::hosting::add_to_waitlist();
+    front_of_house::hosting::seat_at_table();
 }
