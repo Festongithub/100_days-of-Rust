@@ -10,22 +10,23 @@ mod front_of_house {
         fn take_payment() {}
     }
 }
+use crate::front_of_house::hosting;
 
+mod customer {
 pub fn eat_at_restaurant()
 {
-    crate::front_of_house::hosting::add_to_waitlist();
-    crate::front_of_house::hosting::seat_at_table();
-
-    front_of_house::hosting::add_to_waitlist();
-    front_of_house::hosting::seat_at_table();
-
+   super::hosting::add_to_waitlist();
+    super::hosting::seat_at_table();
+    super::front_of_house::hosting::add_to_waitlist();
+    super::front_of_house::hosting::seat_at_table();
+}
 }
 fn deliver_order() {}
 
 mod back_of_house {
     fn fix_incorrect_order(){
         cook_order();
-        supe::deliver_order();
+        super::deliver_order();
     }
     fn cook_order() {}
 }
