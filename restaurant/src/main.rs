@@ -1,6 +1,7 @@
 #!/usr/bin/rustc
+use std::collections::HashMap;
 mod rectangle;
-use crate::rectangle::{area, division,state_name, check_sum};
+pub use crate::rectangle::*;
 fn main()
 {
     let i = 90;
@@ -13,4 +14,8 @@ fn main()
 
     check_sum(i);
     check_sum(j);
+    call_function();
+
+    let mut map = HashMap::new();
+    map.insert(1, 3);
 }

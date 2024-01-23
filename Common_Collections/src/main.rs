@@ -14,14 +14,9 @@ fn main() {
 
     println!("Third element is {}",third);
 
-    let fourth: Option<&i32> = v.get(2);
-    match fourth {
-        Some(fouth) => println!("{} is fouth", fourth);
-        None => println!("There is no third element");
+    for ii in &v {
+        println!("{}", ii);
     }
-
-
-
     let mut nums: Vec<i32> = Vec::new();
 
     let b = a;
@@ -32,4 +27,11 @@ fn main() {
 
     let one = &nums[0];
     println!("{} is first in element", one);
+
+
+    let mut gig = vec![8900, 6788, 3423, 6784, 9000];
+    for j in &mut gig {
+        *j += 8900;
+        println!("{j}");
+    }
 }

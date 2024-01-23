@@ -23,3 +23,5 @@ pub fn check_sum(x: u32){
     }
 }
 
+pub fn call_function() {}
+
