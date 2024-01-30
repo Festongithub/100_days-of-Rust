@@ -1,26 +1,32 @@
+#!/usr/bin/rustc
+
 use std::fs::File;
-fn main() {
+use std::io::ErrorKind;
 
-    let mut nums = Vec::new();
-    let a = [67, 45, 68, 90, 44];
+enum Result <T, E>
+{
+Ok(T),
+Err(E),
+}
+fn main()
+{
 
-    nums.push(a[4]);
-    nums.push(a[3]);
-    nums.push(a[2]);
-    nums.push(a[1]);
-    nums.push(a[0]);
+let my_file = File::open("my_file.txt");
 
-    for i in nums{
-        println!("{i}");
-    }
-
-    let get_file_result = File::open("hello.txt");
-
-    let get_file_result = match get_file_result{
-        Ok(file) => file,
-        Err(error) => {
-            println!("File found");
-            panic!("Problem opening file: {:?}", error);
-        }
-    };
+let check_file = match my_file {
+Ok(file) => file,
+Err(error) => match error.kind()
+{
+ErrorKind::NotFound => {
+match File::create("my_file.txt")
+{
+Ok(fc) => fc,
+Err(e) => panic!("Problem creating the file{:?}", e),
+}
+}
+other_error => {
+panic!("Problem opening the file: {:?}", other_error);
+}
+},
+};
 }
