@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct listint_s
+{
+  const int;
+  struct listint_t *prev;
+  struct listint_t *next;
+} listint_t;
+

@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct listint_t
+{
+  const int n;
+  struct listint_t *prev;
+  struct listint_t *next;
+}listint_t;
+
+void insert_sort(listint_t **list)
+{
+  listint_t *sorted = NULL;
+
+  listint_t *current  = *list;
+
+  while (current != NULL)
+    {
+      next = current-> next;
+
+      current->prev = curr
