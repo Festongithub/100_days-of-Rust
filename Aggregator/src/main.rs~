@@ -1,0 +1,19 @@
+
+pub struct NewsArticle {
+    pub headline: String,
+    pub location: String,
+    pub author: String,
+    pub content: String,
+}
+
+pub trait Summarize{
+    fn summarize(&self) -> String {
+        String::from("(Read more...)")
+    }
+}
+
+
+fn main() {
+    let article = NewsArticle {
+    }
+}

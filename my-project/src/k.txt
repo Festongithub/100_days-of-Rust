@@ -1,0 +1,18 @@
+Sum is 179
+difference is 70
+difference is 7921
+Hello, world!
+The ares of the rectangle is :7020
+The ares of the rectangle is :246
+Name is Jelly Roller
+Age is 45
+Course is Bachelor of Arts
+Sum is 179
+difference is 70
+difference is 7921
+Hello, world!
+The ares of the rectangle is :7020
+The ares of the rectangle is :246
+Name is Jelly Roller
+Age is 45
+Course is Bachelor of Arts
