@@ -1,0 +1,9 @@
+[package]
+name = "WebFrameWorks"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.7.9"
+pyo3 = "0.23.3"
+tokio = "1.42.0"
